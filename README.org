@@ -10,69 +10,76 @@ The idea of this github repository is not so much in the product itself (android
 
 * Minimal Version (DONE)
 
-  [[file:screenShotSimpleVersion_small.jpg]]
-  [[file:screenShotSimpleVersion.jpg][Screenshot of the simplest version of the Clever Counter.]]
+  #+BEGIN_HTML
+  <CENTER>
+  <A HREF="screenShotSimpleVersion.jpg"><IMG SRC="screenShotSimpleVersion_small.jpg"></A>
+</CENTER>
+  #+END_HTML
 
-** Description
-   - Counts nb of clicks of screen
-   - Reset the nb of clicks when asked to.
-** Applications:
-   - baking crepes, to count the number of crepes which have been made;
-   - doing some breathing exercise, counting how many deep breaths have been made;
-   - doing some physical exercise routine (e.g. 15 push ups then 15 tractions then 15 sit in), count how many cycles of exercize have been made;
-   - counting laps at the swimming pool, using a water proof device.
-** Requirements
-   - One global variable for the counter;
-   - One clickable text field, spanning all the space available on the device, to display the counter;
-   - One clickable button to reset the counter.
+  * Description
+    - Counts nb of clicks of screen
+    - Reset the nb of clicks when asked to.
+  * Applications:
+    - baking crepes, to count the number of crepes which have been made;
+    - doing some breathing exercise, counting how many deep breaths have been made;
+    - doing some physical exercise routine (e.g. 15 push ups then 15 tractions then 15 sit in), count how many cycles of exercize have been made;
+    - counting laps at the swimming pool, using a water proof device.
+  * Requirements
+    - One global variable for the counter;
+    - One clickable text field, spanning all the space available on the device, to display the counter;
+    - One clickable button to reset the counter.
 * Extensions
 ** Orientation Persistent Counter (DONE)
-*** Description
+  * Description
     - The counter is *not* reset to zero when changing orientation
-*** Application
+  * Application
     - not to lose the count by inadvertently changing the orientation of the phone 
-*** Requirements
+  * Requirements
     - Setup the activity as "portrait"
 ** Undo button
-*** Description
+  * Description
     - A button permits to "undo" an erroneous click on the count button.
       - In the basic version, it just decreases the counter and update the display, but
       - in advanced version, it also removed the time between two clicks from the statistics (prediction).
-*** Application
+  * Application
     - Correct mistype
-*** Requirements
+  * Requirements
     - additional button "Undo" in main activity
     - checkable option in [[*Settings%20Screen][Settings Screen]]
       (so that one can disable the undo button to simplify and save space on the display screen) 
 ** Information screen
-*** Description 
+  * Description 
     - A clickable small logo/title "CleverCounter" on the top of the screen
     - An additional screen with basic information about the application and programmer,
       - activated when the user click on the logo,
       - desactivated when the user click on the screen again.
     - The counter is not reset (nor the timer stopped) while browsing the information screen.
-*** Application
+  * Application
     - Some information to make publicity for the programmer and his other application
+  * Requirement
+    - Additional activity with text fields
+    - Text values in relevant XML file (for easier translation)
+    - Click detection in activity for return to main activity.
 ** Settings Screen
-*** Description
+  * Description
     - Display a "Settings" screen when the user clicks on the "menu" button of the device.
-*** Applications
+  * Applications
     - make optional and configurable each extension
 ** Partial Increment
-*** Description
+  * Description
     - Configure the increment performed by each click 
-*** Application
+  * Application
     - When baking crepes, click not only when finishing the crepe but also when flipping it.
-*** Requirements
+  * Requirements
     - [[*Settings%20Screen][Set-up activity]]
       - additional text field to enter the increment, by default set to 1.
 ** Timer
-*** Description
+  * Description
     - Runs a decreasing count in seconds (and miliseconds?)
     - Signals the end
-*** Applications
+  * Applications
     - When counting the number of breaths, count within a given amount of time (e.g. 3mns)
-*** Requirement
+  * Requirement
     - [[*Settings%20Screen][Set-up activity]]
       - new checker box in set-up activity
       - new text box in set-up activity
@@ -84,28 +91,28 @@ The idea of this github repository is not so much in the product itself (android
     - Programming
       - code to decrease the timer and update the display every given unit of time
 ** Prediction
-*** Description
+  * Description
     - Predicts next click on screen, and
     - warns when click seems to be late
-*** Applications
+  * Applications
     - When baking crepes, warns the cook that the crepe should be flipped or removed from the fire, based on past experience.
     - In general, reminds the user to click the device at the predicted time.
-*** Requirement
+  * Requirement
     - log all previous clicks (and the delta time)
     - update their average and standard deviation
     - display a [[*Timer][timer]] 
 ** Themes
-*** Description
+  * Description
     - Allows to change the
       - background image
       - background color
       - font color
-*** Application
+  * Application
     - Personalize the application with
       - pictures of crepes if used mainly to bake crepes,
       - inverted colors if used in the dark for breath exercizes,
       - etc...
-*** Requirement
+  * Requirement
     - Additional options in [[*Settings%20Screen][Settings Screen]]
     - additional image field in main application
     - a selection of available themes and background images
