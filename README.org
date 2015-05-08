@@ -121,7 +121,4 @@ The idea of this github repository is not so much in the product itself (android
     - a selection of available themes and background images
     - code to allow the user to add his own background images, and remember all past images from one launch of the application to the next.
 * Acknowledgements
-   Thanks to
-    Natalia Andrea Alarcon Diaz <nataliandrea@ug.uchile.cl>,
-    Vicente Rotman Hinzpeter <vichorot@gmail.com>, and 
-    Bastian Ermann <Bastian_ermann@hotmail.com> for useful discussion and advices.
+   Thanks to Natalia Andrea Alarcon Diaz (mailto:nataliandrea@ug.uchile.cl), Vicente Rotman Hinzpeter (mailto:vichorot@gmail.com), and Bastian Ermann (mailto:Bastian_ermann@hotmail.com) for useful discussion and advices.
