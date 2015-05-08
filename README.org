@@ -4,7 +4,9 @@
 #+EMAIL: jeremy@barbay.cl
 #+CATEGORY: Android Application
 
-The =CleverCounter= is a simple application, conceived as an exercise for those who wish to learn to program in Android (most likely, in Android Studio) for mobile and wearable devices (maybe for watch as well). Its minimal features are truly minimalistic
+The =CleverCounter= is a simple application, conceived as an exercise for those who wish to learn to program in Android (most likely, in Android Studio) for mobile and wearable devices (i.e. cell phones but also potentiall watches).  Its minimal features are truly minimalistic, so that any beginner can fulfil the first version of the program in a class of 1h30 (it takes 15mns to someone with experience); yet it has several extensions for students to work on their own as homework.
+
+The idea of this github repository is not so much in the product itself (android market contains already several applications fulfilling the basic requirements, such as "Simple Counter" from Roman Tsukanov), but rather to capture in the git log all the intermediate steps of the development of this product, and to produce a "hands-on" guide for people who wish to learn how to program android applications using android-studio.
 
 * Minimal Version (DONE)
 ** Description
@@ -74,3 +76,8 @@ The =CleverCounter= is a simple application, conceived as an exercise for those 
     - log all previous clicks (and the delta time)
     - update their average and standard deviation
     - display a [[*Timer][timer]] 
+* Acknowledgements
+   Thanks to
+    Natalia Andrea Alarcon Diaz <nataliandrea@ug.uchile.cl>,
+    Vicente Rotman Hinzpeter <vichorot@gmail.com>, and 
+    Bastian Ermann <Bastian_ermann@hotmail.com> for useful discussion and advices.
