@@ -65,6 +65,9 @@ The idea of this github repository is not so much in the product itself (android
     - Display a "Settings" screen when the user clicks on the "menu" button of the device.
   * Applications
     - make optional and configurable each extension
+  * Requirement
+    - Add activity with clickable buttons
+    - Configure menu entry "Settings" to activate this activity.
 ** Partial Increment
   * Description
     - Configure the increment performed by each click 
