@@ -10,7 +10,7 @@ The idea of this github repository is not so much in the product itself (android
 
 * Minimal Version (DONE)
 
-  [[file:screenShotSimpleVersion.jpg]]
+  [[file:screenShotSimpleVersion_small.jpg]]
   [[file:screenShotSimpleVersion.jpg][Screenshot of the simplest version of the Clever Counter.]]
 
 ** Description
