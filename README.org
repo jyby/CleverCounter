@@ -57,8 +57,8 @@ The idea of this github repository is not so much in the product itself (android
 ** Partial Increment
 *** Description
     - Configure the increment performed by each click 
-*** Applications
-    - 1/2 for crepe flip
+*** Application
+    - When baking crepes, click not only when finishing the crepe but also when flipping it.
 *** Requirements
     - [[*Settings%20Screen][Set-up activity]]
       - additional text field to enter the increment, by default set to 1.
@@ -83,10 +83,29 @@ The idea of this github repository is not so much in the product itself (android
 *** Description
     - Predicts next click on screen, and
     - warns when click seems to be late
+*** Applications
+    - When baking crepes, warns the cook that the crepe should be flipped or removed from the fire, based on past experience.
+    - In general, reminds the user to click the device at the predicted time.
 *** Requirement
     - log all previous clicks (and the delta time)
     - update their average and standard deviation
     - display a [[*Timer][timer]] 
+** Themes
+*** Description
+    - Allows to change the
+      - background image
+      - background color
+      - font color
+*** Application
+    - Personalize the application with
+      - pictures of crepes if used mainly to bake crepes,
+      - inverted colors if used in the dark for breath exercizes,
+      - etc...
+*** Requirement
+    - Additional options in [[*Settings%20Screen][Settings Screen]]
+    - additional image field in main application
+    - a selection of available themes and background images
+    - code to allow the user to add his own background images, and remember all past images from one launch of the application to the next.
 * Acknowledgements
    Thanks to
     Natalia Andrea Alarcon Diaz <nataliandrea@ug.uchile.cl>,
