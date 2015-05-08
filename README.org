@@ -29,6 +29,17 @@ The idea of this github repository is not so much in the product itself (android
     - not to lose the count by inadvertently changing the orientation of the phone 
 *** Requirements
     - Setup the activity as "portrait"
+** Undo button
+*** Description
+    - A button permits to "undo" an erroneous click on the count button.
+      - In the basic version, it just decreases the counter and update the display, but
+      - in advanced version, it also removed the time between two clicks from the statistics (prediction).
+*** Application
+    - Correct mistype
+*** Requirements
+    - additional button "Undo" in main activity
+    - checkable option in [[*Settings%20Screen][Settings Screen]]
+      (so that one can disable the undo button to simplify and save space on the display screen) 
 ** Information screen
 *** Description 
     - A clickable small logo/title "CleverCounter" on the top of the screen
