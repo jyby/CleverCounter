@@ -4,14 +4,42 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class ActiveCounter extends ActionBarActivity {
+
+    int counter_variable = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active_counter);
+
+        Button button_reset = (Button) findViewById(R.id.reset_button);
+        final TextView text_counter = (TextView) findViewById(R.id.increment_button);
+
+        counter_variable = 0;
+
+        button_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter_variable = 0;
+                text_counter.setText("0");
+            }
+        });
+
+        text_counter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter_variable++;
+                text_counter.setText(Integer.toString(counter_variable));
+            }
+        });
+
+
     }
 
     @Override
