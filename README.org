@@ -9,6 +9,10 @@ The =CleverCounter= is a simple application, conceived as an exercise for those 
 The idea of this github repository is not so much in the product itself (android market contains already several applications fulfilling the basic requirements, such as "Simple Counter" from Roman Tsukanov), but rather to capture in the git log all the intermediate steps of the development of this product, and to produce a "hands-on" guide for people who wish to learn how to program android applications using android-studio.
 
 * Minimal Version (DONE)
+
+  [[file:screenShotSimpleVersion.jpg]]
+  [[file:screenShotSimpleVersion.jpg][Screenshot of the simplest version of the Clever Counter.]]
+
 ** Description
    - Counts nb of clicks of screen
    - Reset the nb of clicks when asked to.
