@@ -11,7 +11,8 @@ import android.widget.TextView;
 
 public class ActiveCounter extends ActionBarActivity {
 
-    int counter_variable = 0;
+    double counter_variable = 0;
+    double counter_increment = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,10 @@ public class ActiveCounter extends ActionBarActivity {
         text_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                counter_variable++;
-                text_counter.setText(Integer.toString(counter_variable));
+                counter_variable += counter_increment;
+                text_counter.setText(Double.toString(counter_variable));
             }
         });
-
 
     }
 
