@@ -1,0 +1,91 @@
+#+TITLE: CleverCounter
+#+DESCRIPTION: A simple app to count stuff (from crepes cooked to breath and exercises), with some clever options. 
+#+AUTHOR: Jérémy Barbay
+#+EMAIL: jeremy@barbay.cl
+#+CATEGORY: Android Application
+
+The =CleverCounter= is a simple application, conceived as an exercise for those who wish to learn to program in Android for mobile and wearable devices (maybe for watch as well). Its minimal features are truly minimalistic
+
+* Minimal Version
+** Description
+   - Counts nb of clicks of screen
+** Applications:
+   - baking crepes, to count the number of crepes which have been made;
+   - doing some breathing exercise, counting how many deep breaths have been made;
+   - doing some physical exercise routine (e.g. 15 push ups then 15 tractions then 15 sit in), count how many cycles of exercize have been made;
+   - counting laps at the swimming pool, using a water proof device.
+** Requirements
+   - One global variable for the counter;
+   - One clickable text field, spanning all the space available on the device, to display the counter;
+   - One clickable button to reset the counter.
+* Extensions
+** Orientation Persistent Counter
+*** Description
+    - The counter is *not* reset to zero when changing orientation
+*** Application
+    - not to lose the count by inadvertently changing the orientation of the phone 
+*** Requirements
+    - ????
+** Partial Increment
+*** Description
+    - Configure the increment performed by each click 
+*** Applications
+    - 1/2 for crepe flip
+*** Requirements
+    - Set-up activity
+      - additional text field to enter the increment, by default set to 1.
+** Timer
+*** Description
+    - Runs a decreasing count in seconds (and miliseconds?)
+    - Signals the end
+*** Applications
+    - When counting the number of breaths, count within a given amount of time (e.g. 3mns)
+*** Requirement
+    - Set-up activity
+      - new checker box in set-up activity
+      - new text box in set-up activity
+    - Counter activity
+      - Additional display box to display the timer
+      - Additional buttons:
+	- start timer
+	- reset timer (Can be the same as reset counter?)
+    - Programming
+      - code to decrease the timer and update the display every given unit of time
+** Prediction
+*** Description
+    - Predicts next click on screen, and
+    - warns when click seems to be late
+*** Requirement
+    - log all previous clicks (and the delta time)
+    - update their average and standard deviation
+    - display a timer 
+** Information screen
+*** Description 
+    - A clickable small logo/title "CleverCounter" on the top of the screen
+    - An additional screen with basic information about the application and programmer,
+      - activated when the user click on the logo,
+      - desactivated when the user click on the screen again.
+    - The counter is not reset (nor the timer stopped) while browsing the information screen.
+*** Application
+    - Some information to make publicity for the programmer and his other application
+* Phases
+** Alpha 0 
+  - Detect click on a large button
+  - print nb of clicks so far 
+** Alpha 1
+   - add button to Reset counter
+** BETA 1
+   - [ ] REFACTOR CODE
+** Alpha 2
+   - memorize the times between each click
+   - compute/update the
+     - mean of the time gap
+     - standard deviation of the time gap
+** Alpha 3
+   - display timer to estimated time of next click
+** Alpha 4
+   - Sound alarm when elapsed mean + 2* standard deviation
+** BETA 2 
+   - [ ] REFACTOR CODE
+   
+
