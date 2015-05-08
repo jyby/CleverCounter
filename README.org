@@ -4,11 +4,12 @@
 #+EMAIL: jeremy@barbay.cl
 #+CATEGORY: Android Application
 
-The =CleverCounter= is a simple application, conceived as an exercise for those who wish to learn to program in Android for mobile and wearable devices (maybe for watch as well). Its minimal features are truly minimalistic
+The =CleverCounter= is a simple application, conceived as an exercise for those who wish to learn to program in Android (most likely, in Android Studio) for mobile and wearable devices (maybe for watch as well). Its minimal features are truly minimalistic
 
-* Minimal Version
+* Minimal Version (DONE)
 ** Description
    - Counts nb of clicks of screen
+   - Reset the nb of clicks when asked to.
 ** Applications:
    - baking crepes, to count the number of crepes which have been made;
    - doing some breathing exercise, counting how many deep breaths have been made;
@@ -19,20 +20,34 @@ The =CleverCounter= is a simple application, conceived as an exercise for those 
    - One clickable text field, spanning all the space available on the device, to display the counter;
    - One clickable button to reset the counter.
 * Extensions
-** Orientation Persistent Counter
+** Orientation Persistent Counter (DONE)
 *** Description
     - The counter is *not* reset to zero when changing orientation
 *** Application
     - not to lose the count by inadvertently changing the orientation of the phone 
 *** Requirements
-    - ????
+    - Setup the activity as "portrait"
+** Information screen
+*** Description 
+    - A clickable small logo/title "CleverCounter" on the top of the screen
+    - An additional screen with basic information about the application and programmer,
+      - activated when the user click on the logo,
+      - desactivated when the user click on the screen again.
+    - The counter is not reset (nor the timer stopped) while browsing the information screen.
+*** Application
+    - Some information to make publicity for the programmer and his other application
+** Settings Screen
+*** Description
+    - Display a "Settings" screen when the user clicks on the "menu" button of the device.
+*** Applications
+    - make optional and configurable each extension
 ** Partial Increment
 *** Description
     - Configure the increment performed by each click 
 *** Applications
     - 1/2 for crepe flip
 *** Requirements
-    - Set-up activity
+    - [[*Settings%20Screen][Set-up activity]]
       - additional text field to enter the increment, by default set to 1.
 ** Timer
 *** Description
@@ -41,7 +56,7 @@ The =CleverCounter= is a simple application, conceived as an exercise for those 
 *** Applications
     - When counting the number of breaths, count within a given amount of time (e.g. 3mns)
 *** Requirement
-    - Set-up activity
+    - [[*Settings%20Screen][Set-up activity]]
       - new checker box in set-up activity
       - new text box in set-up activity
     - Counter activity
@@ -58,34 +73,4 @@ The =CleverCounter= is a simple application, conceived as an exercise for those 
 *** Requirement
     - log all previous clicks (and the delta time)
     - update their average and standard deviation
-    - display a timer 
-** Information screen
-*** Description 
-    - A clickable small logo/title "CleverCounter" on the top of the screen
-    - An additional screen with basic information about the application and programmer,
-      - activated when the user click on the logo,
-      - desactivated when the user click on the screen again.
-    - The counter is not reset (nor the timer stopped) while browsing the information screen.
-*** Application
-    - Some information to make publicity for the programmer and his other application
-* Phases
-** Alpha 0 
-  - Detect click on a large button
-  - print nb of clicks so far 
-** Alpha 1
-   - add button to Reset counter
-** BETA 1
-   - [ ] REFACTOR CODE
-** Alpha 2
-   - memorize the times between each click
-   - compute/update the
-     - mean of the time gap
-     - standard deviation of the time gap
-** Alpha 3
-   - display timer to estimated time of next click
-** Alpha 4
-   - Sound alarm when elapsed mean + 2* standard deviation
-** BETA 2 
-   - [ ] REFACTOR CODE
-   
-
+    - display a [[*Timer][timer]] 
