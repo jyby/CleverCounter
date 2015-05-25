@@ -39,6 +39,17 @@ The idea of this github repository is not so much in the product itself (android
       #+BEGIN_SRC 
         android:screenOrientation = "portrait"      
       #+END_SRC
+** Undo button (DONE)
+  * Description
+    - A button permits to "undo" an erroneous click on the count button.
+      - In the basic version, it just decreases the counter and update the display, but
+      - in advanced version, it also removed the time between two clicks from the statistics (prediction).
+  * Application
+    - Correct mistype
+  * Requirements
+    - additional button "Undo" in main activity
+    - checkable option in [[*Settings%20Screen][Settings Screen]]
+      (so that one can disable the undo button to simplify and save space on the display screen) 
 ** Settings Screen
   * Description
     - Display a "Settings" screen when the user clicks on the "menu" button of the device.
@@ -60,17 +71,6 @@ The idea of this github repository is not so much in the product itself (android
     - Additional activity with text fields
     - Text values in relevant XML file (for easier translation)
     - Click detection in activity for return to main activity.
-** Undo button
-  * Description
-    - A button permits to "undo" an erroneous click on the count button.
-      - In the basic version, it just decreases the counter and update the display, but
-      - in advanced version, it also removed the time between two clicks from the statistics (prediction).
-  * Application
-    - Correct mistype
-  * Requirements
-    - additional button "Undo" in main activity
-    - checkable option in [[*Settings%20Screen][Settings Screen]]
-      (so that one can disable the undo button to simplify and save space on the display screen) 
 ** Partial Increment
   * Description
     - Configure the increment performed by each click 
