@@ -14,6 +14,15 @@ public class ActiveCounter extends ActionBarActivity {
     double counter_variable = 0;
     double counter_increment = 1;
 
+    void update_counter() {
+        final TextView text_counter = (TextView) findViewById(R.id.increment_button);
+        if ((counter_variable == Math.floor(counter_variable)) && !Double.isInfinite(counter_variable)) {
+            text_counter.setText(Long.toString(Math.round(counter_variable)));
+        } else {
+            text_counter.setText(Double.toString(counter_variable));
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +46,14 @@ public class ActiveCounter extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 counter_variable -= counter_increment;
-                text_counter.setText(Double.toString(counter_variable));
+                update_counter();
             }
         });
         text_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 counter_variable += counter_increment;
-                text_counter.setText(Double.toString(counter_variable));
+                update_counter();
             }
         });
 
