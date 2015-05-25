@@ -8,8 +8,8 @@
     <TextView android:id="@+id/increment_button"
         android:text="@string/initial_value"
         android:textSize="250dp"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 

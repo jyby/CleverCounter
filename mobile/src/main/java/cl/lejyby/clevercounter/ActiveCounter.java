@@ -15,7 +15,7 @@ public class ActiveCounter extends ActionBarActivity {
     double counter_increment = 1;
 
     void update_counter_display() {
-        final TextView text_counter = (TextView) findViewById(R.id.increment_button);
+        TextView text_counter = (TextView) findViewById(R.id.increment_button);
         if ((counter_variable == Math.floor(counter_variable)) && !Double.isInfinite(counter_variable)) {
             text_counter.setText(Long.toString(Math.round(counter_variable)));
         } else {
