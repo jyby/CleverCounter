@@ -14,7 +14,7 @@ public class ActiveCounter extends ActionBarActivity {
     double counter_variable = 0;
     double counter_increment = 1;
 
-    void update_counter() {
+    void update_counter_display() {
         final TextView text_counter = (TextView) findViewById(R.id.increment_button);
         if ((counter_variable == Math.floor(counter_variable)) && !Double.isInfinite(counter_variable)) {
             text_counter.setText(Long.toString(Math.round(counter_variable)));
@@ -45,15 +45,17 @@ public class ActiveCounter extends ActionBarActivity {
         button_decrement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                counter_variable -= counter_increment;
-                update_counter();
+                if(counter_variable > 0) {
+                    counter_variable -= counter_increment;
+                    update_counter_display();
+                }
             }
         });
         text_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 counter_variable += counter_increment;
-                update_counter();
+                update_counter_display();
             }
         });
 
