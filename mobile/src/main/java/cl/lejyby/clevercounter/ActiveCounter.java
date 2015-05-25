@@ -16,6 +16,11 @@ public class ActiveCounter extends ActionBarActivity {
 
     void update_counter_display() {
         TextView text_counter = (TextView) findViewById(R.id.increment_button);
+        if(counter_variable <100) {
+            text_counter.setTextSize(250);
+        } else if(counter_variable <1000000) {
+            text_counter.setTextSize(100);
+        }
         if ((counter_variable == Math.floor(counter_variable)) && !Double.isInfinite(counter_variable)) {
             text_counter.setText(Long.toString(Math.round(counter_variable)));
         } else {
