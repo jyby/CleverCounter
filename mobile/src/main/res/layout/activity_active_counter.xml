@@ -20,4 +20,12 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        android:id="@+id/decrement_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
 </RelativeLayout>

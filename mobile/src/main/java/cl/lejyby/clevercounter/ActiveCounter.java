@@ -20,6 +20,7 @@ public class ActiveCounter extends ActionBarActivity {
         setContentView(R.layout.activity_active_counter);
 
         Button button_reset = (Button) findViewById(R.id.reset_button);
+        Button button_decrement = (Button) findViewById(R.id.decrement_button);
         final TextView text_counter = (TextView) findViewById(R.id.increment_button);
 
         counter_variable = 0;
@@ -32,6 +33,13 @@ public class ActiveCounter extends ActionBarActivity {
             }
         });
 
+        button_decrement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter_variable -= counter_increment;
+                text_counter.setText(Double.toString(counter_variable));
+            }
+        });
         text_counter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
