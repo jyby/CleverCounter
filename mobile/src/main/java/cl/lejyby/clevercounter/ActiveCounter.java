@@ -43,7 +43,7 @@ public class ActiveCounter extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 counter_variable = 0;
-                text_counter.setText("0");
+                update_counter_display();
             }
         });
 
